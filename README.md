@@ -20,7 +20,7 @@ Baixe e instale a chave de assinatura pública:
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
 
-crie o arquivo elasticsearch.repo dentro de /etc/yum.repos.d/ e copie as linhas abaixo:
+crie o arquivo elastic.repo dentro de /etc/yum.repos.d/ e copie as linhas abaixo:
 
 ```
 [elasticsearch]
@@ -40,9 +40,11 @@ logo após execute os comandos para carregar a lista de pacotes do novo reposit�
 #yum repolist
 ```
 logo após execute a instalação:
+
 ```
-sudo yum install --enablerepo=elasticsearch elasticsearch
+sudo yum install --enablerepo=elasticsearch elasticsearch kibana metricbeat apm-server -y
 ```
 
 
+### Agora vamos a configuração:
 
