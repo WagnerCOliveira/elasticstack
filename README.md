@@ -55,6 +55,13 @@ network.host: 0.0.0.0
 http.port: 9200
 ```
 
+No Elasticsearch no arquivo jvm.options que fica em /etc/elasticsearch/ foi necessário disponibilizar mais recurso de memoria ram, por padrão vem 2Gb e foi alterado para 4Gb.
+
+```-Xms4g
+-Xmx4g
+```
+
+
 No apm-server no arquivo apm-server.yml que fica dentro de /etc/apm-server foi apenas alterado esses parametros:
 
 O bind para deixar a porta exposta para os outros servidores acessarem,
