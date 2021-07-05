@@ -57,7 +57,8 @@ http.port: 9200
 
 No Elasticsearch no arquivo jvm.options que fica em /etc/elasticsearch/ foi necessário disponibilizar mais recurso de memoria ram, por padrão vem 2Gb e foi alterado para 4Gb.
 
-```-Xms4g
+```
+-Xms4g
 -Xmx4g
 ```
 
