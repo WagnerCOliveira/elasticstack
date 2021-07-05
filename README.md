@@ -67,3 +67,18 @@ apm-server:
 output.elasticsearch:
   hosts: ["localhost:9200"]  
 ```
+
+As Configurações do Metricbeat precisam acessar o endereço IP da placa de rede do kibana e do elasticsearch, e foi necessário alterar essas configurações para a comunicação fechar com sucesso.
+
+
+```
+setup.kibana:
+  host: "123.456.78.9:80"
+  
+output.elasticsearch:
+  hosts: ["123.456.78.9:9200"]
+  username: "usuario"
+  password: "senha"
+```
+
+
