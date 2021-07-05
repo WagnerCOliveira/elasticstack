@@ -48,3 +48,22 @@ sudo yum install --enablerepo=elasticsearch elasticsearch kibana metricbeat apm-
 
 ### Agora vamos a configuração:
 
+No Elasticsearch no arquivo elasticsearch.yml que fica dentro de /etc/elasticsearch foi apenas alterado esses parametros:
+
+```
+network.host: 0.0.0.0
+http.port: 9200
+```
+
+No apm-server no arquivo apm-server.yml que fica dentro de /etc/apm-server foi apenas alterado esses parametros:
+
+O bind para deixar a porta exposta para os outros servidores acessarem.
+E a conexão com elasticsearch, como a instalação foi feita no mesmo servidor ficou como localhost.
+
+```
+apm-server:
+  host: "0.0.0.0:8200"
+  
+output.elasticsearch:
+  hosts: ["localhost:9200"]  
+```
