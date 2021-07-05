@@ -1,4 +1,4 @@
-# elasticstack
+# ElasticStack
 
 Aqui vamos mostrar como foi instalado uma stack de Elasticsearch, Kibana, metricbeat, e APM em uma VM com Rehl 7.
 
