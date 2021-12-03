@@ -55,25 +55,25 @@ No diretório raiz terá o arquivo "docker-compose.yml" que é apenas executalo 
 Principais configurações do docker-compose.
 
 Elasticsearch
-'''yml
 
-services:
-  es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
-    container_name: es01
-    environment:
-      - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - data01:/usr/share/elasticsearch/data
-      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-    networks:
-      - elastic
-'''
+
+	services:
+  	  es01:
+    	    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+	    container_name: es01
+	    environment:
+	      - discovery.type=single-node
+	      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+	    ulimits:
+	      memlock:
+	        soft: -1
+	        hard: -1
+	    volumes:
+	      - data01:/usr/share/elasticsearch/data
+	      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+	    networks:
+	      - elastic
+
 
 kibana
 
