@@ -6,8 +6,7 @@
 Tabela de conteúdos
 =================
 <!--ts-->   
-   * [Instalação](#instalacao)
-      * [Pre Requisitos](#pré-requisitos-e-como-rodar-a-aplicação)
+   * [Pre Requisitos](#pré-requisitos-e-como-rodar-a-aplicação)
    * [Features](#Features)	  
    * [Como usar](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
@@ -35,6 +34,7 @@ Tabela de conteúdos
 	- [x]	Instalação via pip
 	- [x]	Configuraçãos settings.py
 
+
 ### Pré-requisitos e como rodar a aplicação
 
 		
@@ -56,15 +56,11 @@ No diretório raiz terá o arquivo "docker-compose.yml" que é apenas executalo 
 ### Principais configurações do docker-compose.
 
 
-Foi necessário criação de uma rede privada para conectar o Apm-server e Kibana ao Elasticsearch.
-
-Para essa Stack foi criada para testes, as configurações abaixo tem que ser revisadas para utilização em ambiantes de Produção.
-
-A variavel "dicovery.type" é responsavel pela formação do cluster onde foi configurado para uso "single-mode" ou seja com apenas um nó para o Elasticsearch.
-
-Foram criados volumes persistentes para salvar os dados dos containers caso sejam reiniciados.
-
-Foram criados arquivos de configuração ".yml" fora do container para melhor gerencia dos testes, e montado com somente leitura.
+- Foi necessário criação de uma rede privada para conectar o Apm-server e Kibana ao Elasticsearch.
+- Para essa Stack foi criada para testes, as configurações abaixo tem que ser revisadas para utilização em ambiantes de Produção.
+- A variavel "dicovery.type" é responsavel pela formação do cluster onde foi configurado para uso "single-mode" ou seja com apenas um nó para o Elasticsearch.
+- Foram criados volumes persistentes para salvar os dados dos containers caso sejam reiniciados.
+- Foram criados arquivos de configuração ".yml" fora do container para melhor gerencia dos testes, e montado com somente leitura.
 
 #### Netowork
 
