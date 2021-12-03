@@ -9,6 +9,7 @@ Tabela de conteúdos
    * [Features](#Features)	  
    * [Pre Requisitos](#pré-requisitos-e-como-rodar-a-aplicação)
    * [Como usar](#como-usar-docker-compose)
+   	* [Principais Configurações](#principais-configurações-do-docker-compose)
    * [Demostração da Aplicação](#demonstração-da-aplicação)   
    * [Tecnologias](#-tecnologias-utilizadas)
    * [Contribuição](#contribuição)
