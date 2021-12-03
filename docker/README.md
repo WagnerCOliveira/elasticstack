@@ -52,32 +52,59 @@ No diretório raiz terá o arquivo "docker-compose.yml" que é apenas executalo 
 
 	docker-compose up -d
 
-Principais configurações do docker-compose.
+### Principais configurações do docker-compose.
 
-Elasticsearch
+#### Elasticsearch
 
 
 	services:
   	  es01:
     	    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
-	    container_name: es01
+	    container_name: es01 
 	    environment:
-	      - discovery.type=single-node
+	      - discovery.type=single-node        # MODO DO CLUSTER ELASTICSEARCH
 	      - ES_JAVA_OPTS=-Xms512m -Xmx512m
 	    ulimits:
 	      memlock:
 	        soft: -1
 	        hard: -1
 	    volumes:
-	      - data01:/usr/share/elasticsearch/data
-	      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+	      - data01:/usr/share/elasticsearch/data    # VOLUME PARA ARMAZENAR DADOS 
+	      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro # ARQUIVO DE CONFIGURAÇÃO
 	    networks:
 	      - elastic
 
 
-kibana
+#### kibana
 
-apm-server
+	  kibana:
+	    container_name: kibana
+	    image: docker.elastic.co/kibana/kibana:7.15.2
+	    environment:
+	      SERVER_NAME: 172.27.10.122
+	      ELASTICSEARCH_HOSTS: '["http://es01:9200"]'
+	    volumes:
+	      - ./kibana.yml:/usr/share/kibana/config/kibana.yml:rw
+	    networks:
+	      - elastic
+	    ports:
+	      - 5601:5601
+
+
+#### apm-server
+
+	apm-server:
+	    container_name: apm-server
+	    image: docker.elastic.co/apm/apm-server:7.15.2
+	    environment:
+	      - output.elasticsearch.hosts=["es01:9200"]
+	    volumes:  
+	      - ./apm-server.docker.yml:/usr/share/apm-server/apm-server.yml:ro
+	    networks:
+	      - elastic
+	    ports:
+	      - 8200:8200
+
 
 
 ### Demonstração da Aplicação
