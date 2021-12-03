@@ -61,9 +61,9 @@ Para essa Stack foi criada para testes, as configurações abaixo tem que ser re
 
 A variavel "dicovery.type" é responsavel pela formação do cluster onde foi configurado para uso "single-mode" ou seja com apenas um nó para o Elasticsearch.
 
-Foi criado um volume persistente para salvar os dados dos containers caso seja reiniciado.
+Foram criados volumes persistentes para salvar os dados dos containers caso sejam reiniciados.
 
-Foi criado arquivos de configuração ".yml" fora do container para melhor gerencia dos testes, e montado com somente leitura.
+Foram criados arquivos de configuração ".yml" fora do container para melhor gerencia dos testes, e montado com somente leitura.
 
 #### Netowork
 
