@@ -6,8 +6,8 @@
 Tabela de conteúdos
 =================
 <!--ts-->   
-   * [Pre Requisitos](#pré-requisitos-e-como-rodar-a-aplicação)
    * [Features](#Features)	  
+   * [Pre Requisitos](#pré-requisitos-e-como-rodar-a-aplicação)
    * [Como usar](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
       * [Executar Docker Compose](#executar-docker-compose)
