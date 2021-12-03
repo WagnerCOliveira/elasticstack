@@ -1,0 +1,6 @@
+# Default Kibana configuration for docker target
+server.host: "0"
+server.shutdownTimeout: "5s"
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+elasticsearch.username: "kibana"
+elasticsearch.password: "#zvA6HecxF_fy7Bl=-KJg[b=l]'[(qd=0"
