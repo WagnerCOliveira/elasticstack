@@ -45,6 +45,7 @@ Tabela de conteúdos
 - Fazer o Git Clone do Repositório.
 - Instalar o Docker - [Documentação](https://docs.docker.com/engine/install/)
 - Instalar o Docker Compose - [Documentação](https://docs.docker.com/compose/install/)
+- Instalar elastic-apm Django - [Documentação](https://www.elastic.co/guide/en/apm/agent/python/current/django-support.html)
 
 ### Executar Docker Compose
 
