@@ -47,7 +47,7 @@ Tabela de conteúdos
 - Instalar o Docker Compose - [Documentação](https://docs.docker.com/compose/install/)
 - Instalar elastic-apm Django - [Documentação](https://www.elastic.co/guide/en/apm/agent/python/current/django-support.html)
 
-### Executar Docker Compose
+### Como Usar Docker Compose
 
 No diretório raiz terá o arquivo "docker-compose.yml" que é apenas executalo que o ambiente ira ser disponibilizado.
 
